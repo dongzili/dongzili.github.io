@@ -3539,6 +3539,25 @@ input, select, textarea {
 				width: 80%;
 			}
 
+		@media screen and (max-width: 736px) {
+        .row > .col-4 {
+            width: 40%;
+        }
+        .row > .col-8 {
+            width: 60%;
+        }
+
+        .row > .h-2 {
+            width: 100%;
+        }
+        .row > .h-4 {
+            width: 100%;
+        }
+        .row > .h-3 {
+            width: 100%;
+        }
+    }
+
 		@media screen and (max-width: 1280px) {
 
 			#banner {
