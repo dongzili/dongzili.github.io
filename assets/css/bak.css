@@ -1796,7 +1796,7 @@ input, select, textarea {
 			font-weight: 600;
 			letter-spacing: 0.25em;
 			margin-bottom: 0;
-			/*text-transform: uppercase;*/
+			text-transform: uppercase;
 		}
 
 		body.is-ie header.major > :first-child:after {
@@ -2747,9 +2747,9 @@ input, select, textarea {
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 20vh;
-			max-height: 20em;
-			min-height: 10em;
+			height: 40vh;
+			max-height: 40em;
+			min-height: 23em;
 			overflow: hidden;
 			position: relative;
 			width: 40%;
@@ -3449,10 +3449,10 @@ input, select, textarea {
 				}
 
 				#banner > .inner .content p {
-					/*font-size: 0.7em;
+					font-size: 0.7em;
 					font-weight: 600;
 					letter-spacing: 0.25em;
-					text-transform: uppercase;*/
+					text-transform: uppercase;
 				}
 
 		#banner.major {
@@ -3504,26 +3504,6 @@ input, select, textarea {
 			transform: translateX(-0.5em);
 			opacity: 0;
 		}
-
-        /*row*/
-        .row {
-                display: flex;
-                flex-wrap: wrap;
-                box-sizing: border-box;
-                align-items: stretch;
-            }
-        .row > .col-4 {
-            width: 22%;
-        }
-        .row > .col-8 {
-            width: 66.66667%;
-        }
-
-     .image.fit {
-            display: block;
-            margin: 2em 2em 2em 2em;
-            width: 80%;
-        }
 
 		@media screen and (max-width: 1280px) {
 
