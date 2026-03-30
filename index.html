@@ -8,6 +8,132 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+		<style>
+			/* Responsive enhancements */
+			#nav ul.container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.5rem 1rem;
+				padding-left: 0;
+			}
+			#nav ul.container li {
+				list-style: none;
+			}
+			#banner .row {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				flex-wrap: wrap;
+			}
+			#banner .col-4,
+			#banner .col-8 {
+				flex: 1 1 280px;
+			}
+			#banner .col-4 {
+				max-width: 340px;
+				margin: 0 auto;
+			}
+			#banner .col-4 img {
+				border-radius: 18px;
+			}
+			.quick-links,
+			.info-links {
+				padding: 2rem 0 1rem 0;
+			}
+			.quick-links .feature-grid,
+			.info-links .feature-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.5rem;
+			}
+			.quick-links .feature-card,
+			.info-links .feature-card {
+				display: block;
+				padding: 2rem 1.5rem;
+				border-radius: 18px;
+				text-decoration: none;
+				min-height: 220px;
+				box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				color: #fff;
+			}
+			.quick-links .feature-card:hover,
+			.info-links .feature-card:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 18px 36px rgba(0,0,0,0.24);
+			}
+			.quick-links .feature-card h3,
+			.quick-links .feature-card p,
+			.info-links .feature-card h3,
+			.info-links .feature-card p,
+			.info-links .feature-card a {
+				color: #fff;
+			}
+			.quick-links .feature-card p,
+			.info-links .feature-card p {
+				margin-bottom: 0.45rem;
+			}
+			.quick-links .feature-card a,
+			.info-links .feature-card a {
+				text-decoration: underline;
+			}
+			.card-cv { background: linear-gradient(135deg, rgba(33, 94, 193, 0.92), rgba(87, 169, 227, 0.88)); }
+			.card-publication { background: linear-gradient(135deg, rgba(30, 130, 113, 0.92), rgba(89, 205, 167, 0.88)); }
+			.card-press { background: linear-gradient(135deg, rgba(200, 86, 47, 0.92), rgba(242, 170, 92, 0.88)); }
+			.card-outreach { background: linear-gradient(135deg, rgba(156, 72, 170, 0.92), rgba(234, 120, 176, 0.88)); }
+			.card-research { background: linear-gradient(135deg, rgba(42, 90, 188, 0.92), rgba(96, 189, 230, 0.88)); }
+			.card-teaching { background: linear-gradient(135deg, rgba(145, 61, 186, 0.92), rgba(239, 122, 120, 0.88)); }
+			.card-about { background: linear-gradient(135deg, rgba(60, 109, 181, 0.92), rgba(113, 174, 235, 0.88)); }
+			.card-contact { background: linear-gradient(135deg, rgba(83, 87, 188, 0.92), rgba(141, 120, 236, 0.88)); }
+			#two .row,
+			#about .row {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				align-items: start;
+			}
+			#two .h-4, #two .h-2,
+			#about .h-3 {
+				width: 100%;
+			}
+			.image.small img {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+			}
+			@media screen and (min-width: 900px) {
+				.quick-links .feature-grid {
+					grid-template-columns: repeat(3, minmax(0, 1fr));
+				}
+				.info-links .feature-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+			@media screen and (min-width: 600px) and (max-width: 899px) {
+				.quick-links .feature-grid,
+				.info-links .feature-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+			@media screen and (max-width: 736px) {
+				#banner .inner {
+					padding: 1rem 0;
+				}
+				#banner h1 {
+					font-size: 2rem;
+				}
+				#nav ul.container {
+					gap: 0.35rem 0.75rem;
+				}
+				.quick-links .feature-card,
+				.info-links .feature-card {
+					min-height: 180px;
+				}
+			}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -21,8 +147,8 @@
                 <ul class="container">
                     <li><a href="#banner">Top</a></li>
                     <li><a href="#one">Work</a></li>
-                    <li><a href="#two">highlight</a></li>
-                    <li><a href="#more">About me</a></li>
+                    <li><a href="#two">Highlights</a></li>
+                    <li><a href="#more">About</a></li>
                 </ul>
             </nav>
 					</header>
@@ -37,14 +163,14 @@
 						<div class="inner">
 							<header class="major">
 								<h1>Dongzi Li, 李冬子</h1>
-                                <h3> Assistant professor at Tsinghua University</h3>
+                                <h3>Assistant Professor, Tsinghua University</h3>
 							</header>
 							<div class="content">
-								<p> Dongzi Li works as a bridge between the theory and observation of compact objects from the study of radio transients, such as Fast Radio Bursts (FRBs) and pulsars. She also use these sources to probe the cosmic matter distribution and magnetic structures. In the past few years, she has discovered the first periodic FRB (Nature 582,351), providing insights into the evolution and internal structure of the source. She pioneered the modeling of active magneto-environments using radio transients (Nature 618,484), advancing our understanding of their evolution. She is a member of the CHIME/FRB collaboration and the FAST key project. 
+								<p>Dongzi Li studies compact objects through radio transients, with a focus on fast radio bursts (FRBs) and pulsars. Her research combines theory and observation, and uses these sources to probe cosmic baryons and magnetized plasma structures. She led the discovery of the first periodic FRB (Nature 582, 351), opening a new window on source environments and emission physics, and pioneered the use of radio transients to model active magnetized environments (Nature 618, 484). She is a member of the CHIME/FRB collaboration and the FAST key project.
 <br />
-Keywords: neutron stars, fast radio bursts, magnetic field, baryon distributions <br />
+Research interests: neutron stars, fast radio bursts, magnetic fields, baryon distribution <br />
 <br />
-Students interested in pursuing a Ph.D. or conducting postdoctoral research are welcome to contact me at dzli@tsinghua.edu.cn.
+Prospective Ph.D. students and postdoctoral researchers are welcome to contact me at dzli@tsinghua.edu.cn.
 </p>
                             </div>
                         </div>
@@ -57,50 +183,40 @@ Students interested in pursuing a Ph.D. or conducting postdoctoral research are 
 					<div id="main">
 
 						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-                                        <h3>CV</h3>
-										<p><a href="CV_Dongzi_Li.pdf" class="link">CV</a></p>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3> Publication </h3>
-										<p><a href=" https://ui.adsabs.harvard.edu/public-libraries/Vk5WwdnZTMa7DVr61HMzlg" class="link">ADS</a></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3> Related Press </h3>
-                                        <p>
-                                        See <a href="https://www.nature.com/articles/s41586-020-2398-2/metrics">Here</a> for a list </br>
-                                <a href="https://www.cnn.com/2020/02/11/world/repeating-fast-radio-burst-pattern-scn-trnd/index.html">CNN</a> </br>
-                                        <a href="https://www.sciencenews.org/article/first-fast-radio-burst-steady-beat">ScienceNews</a> 
-                                        </p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3> Outreach </h3>
-										<p><a href="https://www.youtube.com/watch?v=ekAXvG8MB9g">Astro on Tap (Mandarin)</a></br>
-                                        <a href="https://blogs.cardiff.ac.uk/physicsoutreach/2020/07/02/pythagorean-astronomy-mass-gaps-and-radio-bursts/">Podcast</a></br>
-                                        <a href="https://www.youtube.com/watch?v=BpVjF2lAE60">AstroTours</a></p>
-									</header>
-								</article>
+							<section id="one" class="quick-links">
+								<div class="inner">
+									<div class="feature-grid">
+										<a class="feature-card card-research" href="https://i.astro.tsinghua.edu.cn/~dzli/research.html">
+											<h3>Research</h3>
+											<p>Current projects, scientific themes, and research directions.</p>
+										</a>
+										<a class="feature-card card-teaching" href="https://i.astro.tsinghua.edu.cn/~dzli/teaching.html">
+											<h3>Teaching</h3>
+											<p>Courses, teaching materials, and related resources.</p>
+										</a>
+										<div class="feature-card card-about">
+											<h3>Research Group</h3>
+											<p>Students, postdoctoral researchers, and the broader collaborative research environment.</p>
+										</div>
+										<div class="feature-card card-cv">
+											<h3>CV / Publications</h3>
+											<p><a href="CV_Dongzi_Li.pdf">Curriculum Vitae</a></p>
+											<p><a href="https://ui.adsabs.harvard.edu/public-libraries/Vk5WwdnZTMa7DVr61HMzlg">ADS publication list and citation record</a></p>
+										</div>
+										<div class="feature-card card-outreach">
+											<h3>Outreach</h3>
+											<p><a href="https://www.youtube.com/watch?v=ekAXvG8MB9g">Astro on Tap (Mandarin)</a></p>
+											<p><a href="https://blogs.cardiff.ac.uk/physicsoutreach/2020/07/02/pythagorean-astronomy-mass-gaps-and-radio-bursts/">Podcast</a></p>
+											<p><a href="https://www.youtube.com/watch?v=BpVjF2lAE60">AstroTours</a></p>
+										</div>
+										<div class="feature-card card-press">
+											<h3>Related Press</h3>
+											<p><a href="https://www.nature.com/articles/s41586-020-2398-2/metrics">Nature metrics and media list</a></p>
+											<p><a href="https://www.cnn.com/2020/02/11/world/repeating-fast-radio-burst-pattern-scn-trnd/index.html">CNN</a></p>
+											<p><a href="https://www.sciencenews.org/article/first-fast-radio-burst-steady-beat">ScienceNews</a></p>
+										</div>
+									</div>
+								</div>
 							</section>
 
 
@@ -114,14 +230,12 @@ Students interested in pursuing a Ph.D. or conducting postdoctoral research are 
 
                             <div class="row">
                             <div class="h-4">
-                             <p>I found a 16-day periodicity of a fast radio burst (FRB) with the great data from CHIME/FRB collaboration. The plot is the FRB 20180916B bursts folded at its period.(<a href="https://ui.adsabs.harvard.edu/abs/2020Natur.582..351C/abstract" class="link">Nature 582,351</a>, CHIME/FRB collaboration, Li as corresponding author)</p>
+                             <p>Using CHIME/FRB data, I identified a 16-day periodicity in FRB 20180916B. The figure shows the burst activity folded on the measured period. (<a href="https://ui.adsabs.harvard.edu/abs/2020Natur.582..351C/abstract" class="link">Nature 582, 351</a>; CHIME/FRB Collaboration, Li as corresponding author)</p>
                              <span class="image small"><img src="r3.png" alt="" /></span>
                              <span class="image small"><img src="r3_nature_cite.png" alt="" /></span>
 						</div>
                             <div class="h-2 aln-center">
-									<p>We observe diverse, rare polarization effects in a pulsar binary system. 
-                                    They resembles the recent polarization observation of some of the FRB repeaters, suggesting the latter may also reside in a binary system.
-                                    The figure below shows that the circular polarization V of the pulsar changes signs when the line of sight is approaching the companion. I model the effect as the pulsar radio emission passing through the poloidal field of the companion. (<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220507917L/abstract" class="link">Nature 618, 484–488</a>, Li et al.) </p>
+									<p>We identified rare and diverse polarization effects in a pulsar binary system. These features resemble polarization behavior seen in some repeating FRBs, suggesting that related sources may also arise in binary environments. The figure below shows that the circular polarization, V, reverses sign as the line of sight approaches the companion. I modeled this effect as pulsar radio emission propagating through the companion's poloidal magnetic field. (<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220507917L/abstract" class="link">Nature 618, 484–488</a>, Li et al.)</p>
                              <span class="image small"><img src="Ter5A_demo.png" alt="" /></span>
 
                         </div>
@@ -129,41 +243,29 @@ Students interested in pursuing a Ph.D. or conducting postdoctoral research are 
 								</div>
 							</section>
 
-							<section id="more" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-                                        <h3>More about me</h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>Contact</h3>
-                                        <p>dongzili@princeton.edu</p>
-									</header>
-                            </section>
-
                             <!--about me-->
+							<section id="more">
+								<div class="inner">
+									<header class="major">
+										<h2>Beyond Research</h2>
+									</header>
+								</div>
+							</section>
 							<section id="about">
 								<div class="inner">
 
                             <div class="row">
                             <div class="h-3">
-                             <p>I practice karate, although, sadly, not yet a flying Kungfu master as seen on the TV. </p>
+                             <p>I practice karate, though I am still far from the flying kung fu masters of television.</p>
                              <span class="image small"><img src="canyon.jpg" alt="" /></span>
 						</div>
                             <div class="h-3">
-                             <p>I love trees and kitties, although the latter may not always love me. </p>
+                             <p>I love trees and cats, although the latter do not always return the feeling.</p>
                              <span class="image small"><img src="tree.JPEG" alt="" /></span>
                              <span class="image small"><img src="kitty.JPEG" alt="" /></span>
 						</div>
                             <div class="h-3">
-                             <p>Great appreciation to my parents. </p>
+                             <p>With deep gratitude to my parents.</p>
                              <span class="image small"><img src="parents.JPG" alt="" /></span>
 						</div>
                             </div>
