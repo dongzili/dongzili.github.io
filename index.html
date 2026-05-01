@@ -1,294 +1,123 @@
-<!DOCTYPE HTML>
-<!--
--->
-<html>
-	<head>
-		<title>Dongzi Li</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	
-		<style>
-			/* Responsive enhancements */
-			#nav ul.container {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 0.5rem 1rem;
-				padding-left: 0;
-			}
-			#nav ul.container li {
-				list-style: none;
-			}
-			#banner .row {
-				display: flex;
-				align-items: center;
-				gap: 2rem;
-				flex-wrap: wrap;
-			}
-			#banner .col-4,
-			#banner .col-8 {
-				flex: 1 1 280px;
-			}
-			#banner .col-4 {
-				max-width: 340px;
-				margin: 0 auto;
-			}
-			#banner .col-4 img {
-				border-radius: 18px;
-			}
-			.quick-links,
-			.info-links {
-				padding: 2rem 0 1rem 0;
-			}
-			.quick-links .feature-grid,
-			.info-links .feature-grid {
-				display: grid;
-				grid-template-columns: 1fr;
-				gap: 1.5rem;
-			}
-			.quick-links .feature-card,
-			.info-links .feature-card {
-				display: block;
-				padding: 2rem 1.5rem;
-				border-radius: 18px;
-				text-decoration: none;
-				min-height: 220px;
-				box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-				transition: transform 0.25s ease, box-shadow 0.25s ease;
-				color: #fff;
-			}
-			.quick-links .feature-card:hover,
-			.info-links .feature-card:hover {
-				transform: translateY(-6px);
-				box-shadow: 0 18px 36px rgba(0,0,0,0.24);
-			}
-			.quick-links .feature-card h3,
-			.quick-links .feature-card p,
-			.info-links .feature-card h3,
-			.info-links .feature-card p,
-			.info-links .feature-card a {
-				color: #fff;
-			}
-			.quick-links .feature-card p,
-			.info-links .feature-card p {
-				margin-bottom: 0.45rem;
-			}
-			.quick-links .feature-card a,
-			.info-links .feature-card a {
-				text-decoration: underline;
-			}
-			.card-cv { background: linear-gradient(135deg, rgba(33, 94, 193, 0.92), rgba(87, 169, 227, 0.88)); }
-			.card-publication { background: linear-gradient(135deg, rgba(30, 130, 113, 0.92), rgba(89, 205, 167, 0.88)); }
-			.card-press { background: linear-gradient(135deg, rgba(200, 86, 47, 0.92), rgba(242, 170, 92, 0.88)); }
-			.card-outreach { background: linear-gradient(135deg, rgba(156, 72, 170, 0.92), rgba(234, 120, 176, 0.88)); }
-			.card-research { background: linear-gradient(135deg, rgba(42, 90, 188, 0.92), rgba(96, 189, 230, 0.88)); }
-			.card-teaching { background: linear-gradient(135deg, rgba(145, 61, 186, 0.92), rgba(239, 122, 120, 0.88)); }
-			.card-about { background: linear-gradient(135deg, rgba(60, 109, 181, 0.92), rgba(113, 174, 235, 0.88)); }
-			.card-contact { background: linear-gradient(135deg, rgba(83, 87, 188, 0.92), rgba(141, 120, 236, 0.88)); }
-			#two .row,
-			#about .row {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 1.5rem;
-				align-items: start;
-			}
-			#two .h-4, #two .h-2,
-			#about .h-3 {
-				width: 100%;
-			}
-			.image.small img {
-				width: 100%;
-				height: auto;
-				border-radius: 12px;
-			}
-			@media screen and (min-width: 900px) {
-				.quick-links .feature-grid {
-					grid-template-columns: repeat(3, minmax(0, 1fr));
-				}
-				.info-links .feature-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-				}
-			}
-			@media screen and (min-width: 600px) and (max-width: 899px) {
-				.quick-links .feature-grid,
-				.info-links .feature-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-				}
-			}
-			@media screen and (max-width: 736px) {
-				#banner .inner {
-					padding: 1rem 0;
-				}
-				#banner h1 {
-					font-size: 2rem;
-				}
-				#nav ul.container {
-					gap: 0.35rem 0.75rem;
-				}
-				.quick-links .feature-card,
-				.info-links .feature-card {
-					min-height: 180px;
-				}
-			}
-		</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dongzi Li</title>
+  <meta name="description" content="Dongzi Li studies compact objects through radio transients, with a focus on fast radio bursts and pulsars.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-	</head>
-	<body class="is-preload">
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-photo">
+          <img src="images/headshot.jpg" alt="Portrait of Dongzi Li" width="726" height="900" fetchpriority="high">
+        </div>
+        <div class="hero-copy">
+          <h1>Dongzi Li, 李冬子</h1>
+          <h2>Assistant Professor, Tsinghua University</h2>
+          <p>Dongzi Li studies compact objects through radio transients, with a focus on fast radio bursts (FRBs) and pulsars. Her research combines theory and observation, and uses these sources to probe cosmic baryons and magnetized plasma structures. She led the discovery of the first periodic FRB (Nature 582, 351), opening a new window on source environments and emission physics, and pioneered the use of radio transients to model active magnetized environments (Nature 618, 484). She is a member of the CHIME/FRB collaboration and the FAST key project.</p>
+          <p>Research interests: neutron stars, fast radio bursts, magnetic fields, baryon distribution</p>
+          <p>Prospective Ph.D. students and postdoctoral researchers are welcome to contact me at <a href="mailto:dzli@tsinghua.edu.cn">dzli@tsinghua.edu.cn</a>.</p>
+        </div>
+      </div>
+    </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <section id="work" class="section">
+      <div class="container">
+        <h2>Work</h2>
+        <div class="card-grid">
+          <section class="card research">
+            <h3><a href="https://i.astro.tsinghua.edu.cn/~dzli/research/">Research</a></h3>
+          </section>
+          <section class="card teaching">
+            <h3><a href="https://i.astro.tsinghua.edu.cn/~dzli/class/">Teaching</a></h3>
+          </section>
+          <section class="card group">
+            <h3>Group Members</h3>
+          </section>
+          <section class="card cv">
+            <h3>CV / Publications</h3>
+            <p><a href="CV_Dongzi_Li.pdf">Curriculum Vitae</a></p>
+            <p><a href="https://ui.adsabs.harvard.edu/public-libraries/Vk5WwdnZTMa7DVr61HMzlg">ADS publication list and citation record</a></p>
+          </section>
+          <section class="card outreach">
+            <h3>Outreach</h3>
+            <p><a href="https://www.youtube.com/watch?v=ekAXvG8MB9g">Astro on Tap (Mandarin)</a></p>
+            <p><a href="https://blogs.cardiff.ac.uk/physicsoutreach/2020/07/02/pythagorean-astronomy-mass-gaps-and-radio-bursts/">Podcast</a></p>
+            <p><a href="https://www.youtube.com/watch?v=BpVjF2lAE60">AstroTours</a></p>
+          </section>
+          <section class="card press">
+            <h3>Related Press</h3>
+            <p><a href="https://www.nature.com/articles/s41586-020-2398-2/metrics">Nature metrics and media list</a></p>
+            <p><a href="https://www.cnn.com/2020/02/11/world/repeating-fast-radio-burst-pattern-scn-trnd/index.html">CNN</a></p>
+            <p><a href="https://www.sciencenews.org/article/first-fast-radio-burst-steady-beat">ScienceNews</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-        <!-- Nav -->
-            <nav id="nav">
-                <ul class="container">
-                    <li><a href="#banner">Top</a></li>
-                    <li><a href="#one">Work</a></li>
-                    <li><a href="#two">Highlights</a></li>
-                    <li><a href="#more">About</a></li>
-                </ul>
-            </nav>
-					</header>
+    <section id="highlights" class="section">
+      <div class="container">
+        <h2>Research Highlight</h2>
+        <div class="highlight-grid">
+          <article class="highlight">
+            <p>Using CHIME/FRB data, I identified a 16-day periodicity in FRB 20180916B. The figure shows the burst activity folded on the measured period. (<a href="https://ui.adsabs.harvard.edu/abs/2020Natur.582..351C/abstract">Nature 582, 351</a>; CHIME/FRB Collaboration, Li as corresponding author)</p>
+            <div class="figure-stack">
+              <img src="images/r3.png" alt="Folded burst activity for FRB 20180916B" width="525" height="946" loading="lazy">
+              <img src="images/r3_nature_cite.png" alt="Citation and metrics figure" width="1520" height="914" loading="lazy">
+            </div>
+          </article>
+          <article class="highlight">
+            <p>We identified rare and diverse polarization effects in a pulsar binary system. These features resemble polarization behavior seen in some repeating FRBs, suggesting that related sources may also arise in binary environments. The figure below shows that the circular polarization, V, reverses sign as the line of sight approaches the companion. I modeled this effect as pulsar radio emission propagating through the companion's poloidal magnetic field. (<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220507917L/abstract">Nature 618, 484–488</a>, Li et al.)</p>
+            <div class="figure-stack">
+              <img src="images/Ter5A_demo.png" alt="Polarization effect figure for Terzan 5A" width="1258" height="1178" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-				<!-- Banner -->
-                            <div class="row">
-                            <div class="col-4">
-                             <span class="image fit"><img src="headphotodzli.jpeg" alt="" /></span>
-						</div>
-                                <div class="col-8">
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Dongzi Li, 李冬子</h1>
-                                <h3>Assistant Professor, Tsinghua University</h3>
-							</header>
-							<div class="content">
-								<p>Dongzi Li studies compact objects through radio transients, with a focus on fast radio bursts (FRBs) and pulsars. Her research combines theory and observation, and uses these sources to probe cosmic baryons and magnetized plasma structures. She led the discovery of the first periodic FRB (Nature 582, 351), opening a new window on source environments and emission physics, and pioneered the use of radio transients to model active magnetized environments (Nature 618, 484). She is a member of the CHIME/FRB collaboration and the FAST key project.
-<br />
-Research interests: neutron stars, fast radio bursts, magnetic fields, baryon distribution <br />
-<br />
-Prospective Ph.D. students and postdoctoral researchers are welcome to contact me at dzli@tsinghua.edu.cn.
-</p>
-                            </div>
-                        </div>
-						</div>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Beyond Research</h2>
+        <div class="about-grid">
+          <article class="about-card">
+            <p>I practice karate, though I am still far from the flying kung fu masters of television.</p>
+            <img src="images/canyon.jpg" alt="Dongzi Li outdoors" width="1600" height="1200" loading="lazy">
+          </article>
+          <article class="about-card">
+            <p>I love trees and cats, although the latter do not always return the feeling.</p>
+            <img src="images/tree.jpg" alt="Tree photograph" width="900" height="1200" loading="lazy">
+            <img src="images/kitty.jpg" alt="Cat photograph" width="1600" height="873" loading="lazy">
+          </article>
+          <article class="about-card">
+            <p>With deep gratitude to my parents.</p>
+            <img src="images/parents.jpg" alt="Parents" width="900" height="1200" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                    	</div>
-					</section>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one" class="quick-links">
-								<div class="inner">
-									<div class="feature-grid">
-										<a class="feature-card card-research" href="https://i.astro.tsinghua.edu.cn/~dzli/research.html">
-											<h3>Research</h3>
-										</a>
-										<a class="feature-card card-teaching" href="https://i.astro.tsinghua.edu.cn/~dzli/class/">
-											<h3>Teaching</h3>
-										</a>
-										<div class="feature-card card-about">
-											<h3>Group Members</h3>
-										</div>
-										<div class="feature-card card-cv">
-											<h3>CV / Publications</h3>
-											<p><a href="CV_Dongzi_Li.pdf">Curriculum Vitae</a></p>
-											<p><a href="https://ui.adsabs.harvard.edu/public-libraries/Vk5WwdnZTMa7DVr61HMzlg">ADS publication list and citation record</a></p>
-										</div>
-										<div class="feature-card card-outreach">
-											<h3>Outreach</h3>
-											<p><a href="https://www.youtube.com/watch?v=ekAXvG8MB9g">Astro on Tap (Mandarin)</a></p>
-											<p><a href="https://blogs.cardiff.ac.uk/physicsoutreach/2020/07/02/pythagorean-astronomy-mass-gaps-and-radio-bursts/">Podcast</a></p>
-											<p><a href="https://www.youtube.com/watch?v=BpVjF2lAE60">AstroTours</a></p>
-										</div>
-										<div class="feature-card card-press">
-											<h3>Related Press</h3>
-											<p><a href="https://www.nature.com/articles/s41586-020-2398-2/metrics">Nature metrics and media list</a></p>
-											<p><a href="https://www.cnn.com/2020/02/11/world/repeating-fast-radio-burst-pattern-scn-trnd/index.html">CNN</a></p>
-											<p><a href="https://www.sciencenews.org/article/first-fast-radio-burst-steady-beat">ScienceNews</a></p>
-										</div>
-									</div>
-								</div>
-							</section>
-
-
-					</div>
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-									<h2>Research Highlight</h2>
-									</header>
-
-                            <div class="row">
-                            <div class="h-4">
-                             <p>Using CHIME/FRB data, I identified a 16-day periodicity in FRB 20180916B. The figure shows the burst activity folded on the measured period. (<a href="https://ui.adsabs.harvard.edu/abs/2020Natur.582..351C/abstract" class="link">Nature 582, 351</a>; CHIME/FRB Collaboration, Li as corresponding author)</p>
-                             <span class="image small"><img src="r3.png" alt="" /></span>
-                             <span class="image small"><img src="r3_nature_cite.png" alt="" /></span>
-						</div>
-                            <div class="h-2 aln-center">
-									<p>We identified rare and diverse polarization effects in a pulsar binary system. These features resemble polarization behavior seen in some repeating FRBs, suggesting that related sources may also arise in binary environments. The figure below shows that the circular polarization, V, reverses sign as the line of sight approaches the companion. I modeled this effect as pulsar radio emission propagating through the companion's poloidal magnetic field. (<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220507917L/abstract" class="link">Nature 618, 484–488</a>, Li et al.)</p>
-                             <span class="image small"><img src="Ter5A_demo.png" alt="" /></span>
-
-                        </div>
-						</div>
-								</div>
-							</section>
-
-                            <!--about me-->
-							<section id="more">
-								<div class="inner">
-									<header class="major">
-										<h2>Beyond Research</h2>
-									</header>
-								</div>
-							</section>
-							<section id="about">
-								<div class="inner">
-
-                            <div class="row">
-                            <div class="h-3">
-                             <p>I practice karate, though I am still far from the flying kung fu masters of television.</p>
-                             <span class="image small"><img src="canyon.jpg" alt="" /></span>
-						</div>
-                            <div class="h-3">
-                             <p>I love trees and cats, although the latter do not always return the feeling.</p>
-                             <span class="image small"><img src="tree.JPEG" alt="" /></span>
-                             <span class="image small"><img src="kitty.JPEG" alt="" /></span>
-						</div>
-                            <div class="h-3">
-                             <p>With deep gratitude to my parents.</p>
-                             <span class="image small"><img src="parents.JPG" alt="" /></span>
-						</div>
-                            </div>
-                        </section>
-								</article>
-
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>&copy; Dongzi Li</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Dongzi Li. Design adapted from the existing personal website.</p>
+    </div>
+  </footer>
+</body>
 </html>
